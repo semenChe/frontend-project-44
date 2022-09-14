@@ -14,7 +14,7 @@ const expression = () => {
     randomOperator = operators[randomNumber(0, 3)];
     firstOperand = randomNumber(0, 11);
     secondOperand = randomNumber(0, 11);
-    return `${firstOperand}${randomOperator}${secondOperand}`;
+    return `${firstOperand} ${randomOperator} ${secondOperand}`;
   };
   let result = 0;
   const correctAnswer = () => {
