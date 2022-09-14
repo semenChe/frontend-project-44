@@ -13,7 +13,7 @@ const progression = () => {
   const quest = () => {
     nextProgressionValue = randomNumber(0, 101);
     increase = randomNumber(1, 6);
-    hiddenNumber = randomNumber(1, 11);
+    hiddenNumber = randomNumber(1, 10);
     const arr = [];
     for (let i = 0; i < 10; i += 1) {
       arr.push(nextProgressionValue);
