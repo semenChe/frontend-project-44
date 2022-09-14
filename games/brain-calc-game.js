@@ -8,25 +8,25 @@ const expression = () => {
   index.whatAreTheRulesOfTheGame('What is the result of the expression?');
   const operators = ['+', '-', '*'];
   let randomOperator = '';
-  let randomNumber1 = 0;
-  let randomNumber2 = 0;
+  let firstOperand = 0;
+  let secondOperand = 0;
   const quest = () => {
     randomOperator = operators[randomNumber(0, 3)];
-    randomNumber1 = randomNumber(0, 11);
-    randomNumber2 = randomNumber(0, 11);
-    return `${randomNumber1}${randomOperator}${randomNumber2}`;
+    firstOperand = randomNumber(0, 11);
+    secondOperand = randomNumber(0, 11);
+    return `${firstOperand}${randomOperator}${secondOperand}`;
   };
   let result = 0;
   const correctAnswer = () => {
     switch (randomOperator) {
       case '*':
-        result = randomNumber1 * randomNumber2;
+        result = firstOperand * secondOperand;
         break;
       case '+':
-        result = randomNumber1 + randomNumber2;
+        result = firstOperand + secondOperand;
         break;
       default:
-        result = randomNumber1 - randomNumber2;
+        result = firstOperand - secondOperand;
         break;
     }
     return String(result);
