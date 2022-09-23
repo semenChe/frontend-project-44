@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import expression from '../games/brain-calc-game.js';
+import expression from '../src/games/brain-calc-game.js';
 
 expression();
