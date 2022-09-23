@@ -13,7 +13,7 @@ const prime = () => {
       }
       return true;
     };
-    const correctAnswer = isPrime(anotherGameQuestion) ? 'no' : 'yes';
+    const correctAnswer = isPrime(anotherGameQuestion) ? 'yes' : 'no';
     return [anotherGameQuestion, correctAnswer];
   };
   gameEngine(description, dataGeneration);
