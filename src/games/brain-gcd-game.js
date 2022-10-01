@@ -10,7 +10,7 @@ const getGcd = (number1, number2) => {
   }
   return undefined;
 };
-const dataGeneration = () => {
+const getQuestionAndAnswer = () => {
   const number1 = randomNumber(1, 101);
   const number2 = randomNumber(1, 101);
   const anotherGameQuestion = `${number1} ${number2}`;
@@ -18,5 +18,5 @@ const dataGeneration = () => {
   return [anotherGameQuestion, expectedAnswer];
 };
 export default () => {
-  gameEngine(description, dataGeneration);
+  gameEngine(description, getQuestionAndAnswer);
 };

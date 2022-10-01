@@ -10,11 +10,11 @@ const isPrime = (n) => {
   }
   return true;
 };
-const dataGeneration = () => {
+const getQuestionAndAnswer = () => {
   const anotherGameQuestion = randomNumber(2, 100);
   const expectedAnswer = isPrime(anotherGameQuestion) ? 'yes' : 'no';
   return [anotherGameQuestion, expectedAnswer];
 };
 export default () => {
-  gameEngine(description, dataGeneration);
+  gameEngine(description, getQuestionAndAnswer);
 };

@@ -3,7 +3,7 @@ import randomNumber from '../helper.js';
 
 const description = 'What number is missing in the progression?';
 const lengthOfProgression = 10;
-const progressionFormation = () => {
+const getProgression = () => {
   let nextProgressionValue = randomNumber(0, 101);
   const increase = randomNumber(1, 6);
   const result = [];
@@ -13,8 +13,8 @@ const progressionFormation = () => {
   }
   return result;
 };
-const dataGeneration = () => {
-  const progression = progressionFormation();
+const getQuestionAndAnswer = () => {
+  const progression = getProgression();
   const hiddenNumber = randomNumber(1, lengthOfProgression);
   const expectedAnswer = String(progression[hiddenNumber]);
   progression[hiddenNumber] = '..';
@@ -22,5 +22,5 @@ const dataGeneration = () => {
   return [anotherGameQuestion, expectedAnswer];
 };
 export default () => {
-  gameEngine(description, dataGeneration);
+  gameEngine(description, getQuestionAndAnswer);
 };

@@ -3,7 +3,7 @@ import randomNumber from '../helper.js';
 
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const expectedAnswerGeneration = (randomOperator, firstOperand, secondOperand) => {
+const calculateOperations = (randomOperator, firstOperand, secondOperand) => {
   let result = 0;
   switch (randomOperator) {
     case '*':
@@ -18,14 +18,14 @@ const expectedAnswerGeneration = (randomOperator, firstOperand, secondOperand) =
   }
   return String(result);
 };
-const dataGeneration = () => {
+const getQuestionAndAnswer = () => {
   const randomOperator = operators[randomNumber(0, 3)];
   const firstOperand = randomNumber(0, 11);
   const secondOperand = randomNumber(0, 11);
   const anotherGameQuestion = `${firstOperand} ${randomOperator} ${secondOperand}`;
-  const expectedAnswer = expectedAnswerGeneration(randomOperator, firstOperand, secondOperand);
+  const expectedAnswer = calculateOperations(randomOperator, firstOperand, secondOperand);
   return [anotherGameQuestion, expectedAnswer];
 };
 export default () => {
-  gameEngine(description, dataGeneration);
+  gameEngine(description, getQuestionAndAnswer);
 };
