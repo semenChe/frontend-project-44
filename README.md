@@ -38,11 +38,11 @@
 <a href="https://asciinema.org/a/sfsoRsBNk9EXhOcpOFxlkjm7U" target="_blank"><img src="https://asciinema.org/a/sfsoRsBNk9EXhOcpOFxlkjm7U.svg" /></a>
 
 ## Рекомендуемые минимальные требования к системе:
-### Минимальные версии ОС:
+### минимальные версии ОС:
 * Windows 10
 * MacOS 10.14
 * Ubuntu 16, либо удобный вам дистрибутив Linux
-### Процессор: 
+### процессор: 
 * Intel i3 / AMD Ryzen 3
-### Операционная память: 
+### операционная память: 
 * от 8GB
